@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function TBXRayDetector() {
-  const API_BASE = "https://tbxray-98b0a866420e.herokuapp.com/";
+  const API_BASE = "http://127.0.0.1:5000";
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
@@ -334,7 +334,7 @@ export default function TBXRayDetector() {
                 {/* Legend / Info */}
                 <div className="info-box">
                   <p className="info-title">
-                    📊 Interpretation Logic (Per Model)
+                    📊 Interpretation Logic (Model 2)
                   </p>
                   <ul className="info-list">
                     <li>
@@ -349,6 +349,27 @@ export default function TBXRayDetector() {
                     </li>
                     <li>
                       Score &ge; 0.35 : <b>Tuberculosis</b> (High Risk)
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="info-box">
+                  <p className="info-title">
+                    📊 Interpretation Logic (Model 1 & 3)
+                  </p>
+                  <ul className="info-list">
+                    <li>
+                      Score &lt; 0.35 : <b>Normal</b> (High Confidence)
+                    </li>
+                    <li>
+                      0.35 - 0.50 : <b>Borderline Normal</b> (Manual Check
+                      Recommended)
+                    </li>
+                    <li>
+                      0.50 - 0.65 : <b>Borderline TB</b> (Manual Check Required)
+                    </li>
+                    <li>
+                      Score &ge; 0.65 : <b>Tuberculosis</b> (High Risk)
                     </li>
                   </ul>
                 </div>

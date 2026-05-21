@@ -577,6 +577,7 @@ body {
   color: var(--text);
 }
 
+
 .model-warning {
   font-size: 0.8rem;
   color: var(--warning);
