@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function TBXRayDetector() {
-  const API_BASE = "http://127.0.0.1:5000";
+  const API_BASE = "https://tbxray-98b0a866420e.herokuapp.com/";
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
