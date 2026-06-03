@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function TBXRayDetector() {
-  const API_BASE = "http://167.172.80.163:5000/";
+  const API_BASE = "https://api.dantenius.me/";
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
