@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function TBXRayDetector() {
-  const API_BASE = "https://api.dantenius.me/";
+  const API_BASE = "https://tbxray-98b0a866420e.herokuapp.com/";
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
@@ -137,7 +137,10 @@ export default function TBXRayDetector() {
   return (
     <div className="app-shell">
       <div className="app-card">
-        <header className="app-header reveal" style={{ animationDelay: "40ms" }}>
+        <header
+          className="app-header reveal"
+          style={{ animationDelay: "40ms" }}
+        >
           <h1 className="title">TB X-Ray Detector</h1>
           <p className="subtitle">
             Futuristic screening console for rapid TB risk triage.
@@ -146,12 +149,16 @@ export default function TBXRayDetector() {
 
         <div className="grid">
           {/* Upload Section */}
-          <div className="panel column reveal" style={{ animationDelay: "120ms" }}>
+          <div
+            className="panel column reveal"
+            style={{ animationDelay: "120ms" }}
+          >
             <div className="control-card">
               <div>
                 <p className="control-label">Tri Model Consensus</p>
                 <p className="control-subtext">
-                  Analysis runs Model 1 + Model 2 + Model 3 and merges the verdict.
+                  Analysis runs Model 1 + Model 2 + Model 3 and merges the
+                  verdict.
                 </p>
               </div>
             </div>
@@ -248,8 +255,8 @@ export default function TBXRayDetector() {
                     {result.label.includes("CONFIRMED: Normal")
                       ? "✅"
                       : result.label.includes("CONFIRMED: Tuberculosis")
-                      ? "🚨"
-                      : "⚠️"}
+                        ? "🚨"
+                        : "⚠️"}
                   </div>
                   <h2
                     className="result-title"
